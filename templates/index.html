@@ -1,0 +1,56 @@
+<html>
+{% block head %}
+<head>
+  <meta charset="utf-8">
+  <title>Punith's new website</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+{% endblock %}
+
+{% block body %}
+<body>
+  <h2>A Warm welcome to my website</h2>
+  <hr>
+  <div>
+    <h3 class="s">Database operations performed on this page:</h3>
+    <ul style="color:black;">
+      <li>Creation of table</li>
+      <li>One insertion into table</li>
+      <li>Update into table</li>
+      <li>Bulk insertion into table</li>
+      <li>Delete from a table</li>
+      <li>Download data</li>
+    </ul>
+  </div>
+  <div>
+    <table>
+      <tr>
+        <td>
+          <h3 class="s">Login to database:</h3>
+        </td>
+      </tr>
+      <form class="" action="/login" method="post">
+        <tr><td>
+      <label for="operation">Choose a Database:</label></td>
+      <td><select id="operation" name="operation">
+        <option value="Mysql">Mysql</option>
+        <option value="Mongodb">Mongodb</option>
+        <option value="Cassandra">Cassandra</option>
+      </select></td></tr>
+        <tr>
+          <td><label>Enter ID: </label></td>
+          <td><input type="text" name="id" ></td>
+        </tr>
+        <tr>
+          <td><label>Enter Password: </label></td>
+          <td><input type="text" name="pass" ></td>
+          <td><input type="submit" name="Submit" value="Submit"></td>
+        </tr>
+      </form>
+    </table>
+    <hr>
+  </div>
+</body>
+{% endblock %}
+</html>
+
