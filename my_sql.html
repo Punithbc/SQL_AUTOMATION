@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MYSQL PAGE</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+<hr>
+<h2 class="c">DATABASE OPERATION</h2>
+<h3 class="c">(mysql)</h3>
+    <table>
+      <tr>
+        <td>
+          <h3 class="s">Creation of table:</h3>
+        </td>
+      </tr>
+      <form class="" action="/creation" method="post">
+        <tr>
+          <td><label>Enter Database: </label></td>
+          <td><input type="text" name="database" ></td>
+        </tr>
+        <tr>
+          <td><label>Enter TableName:</label></td>
+          <td><input type="text" name="name"></td>
+        </tr>
+        <tr>
+          <td><label>Enter Column_name datatype:</label></td>
+          <td><input type="text" name="columns"></td>
+          <td><input type="submit" name="Submit" value="Submit"></td>
+        </tr>
+      </form>
+    </table>
+    <hr>
+    <table>
+      <tr>
+        <td>
+          <h3 class="s">One insertion into table:</h3>
+        </td>
+      </tr>
+      <form class="" action="/insertion" method="post">
+        <tr>
+          <td><label>Enter Database:</label></td>
+          <td><input type="text" name="database" value=""></td>
+        </tr>
+        <tr>
+          <td><label>Enter TableName: </label></td>
+          <td><input type="text" name="tableName" value=""></td>
+        </tr>
+        <tr>
+          <td><label>Enter Attributes: </label></td>
+          <td><input type="text" name="attributes" value=""></td>
+        </tr>
+        <tr>
+          <td><label>Enter Values:</label></td>
+          <td><input type="text" name="values" value=""></td>
+          <td><input type="submit" name="Submit" value="Submit"></td>
+        </tr>
+      </form>
+    </table>
+    <hr>
+    <table>
+      <tr>
+        <td>
+          <h3 class="s">Update into table:</h3>
+        </td>
+      </tr>
+      <form class="" action="/update" method="post">
+        <tr>
+          <td><label>Enter Database:</label></td>
+          <td><input type="text" name="database" value=""></td>
+        </tr>
+        <tr>
+          <td><label>Enter tableName: </label></td>
+          <td><input type="text" name="tableName" value=""></td>
+        </tr>
+        <tr>
+          <td><label>SET: </label></td>
+          <td><input type="text" name="set_value" value=""></td>
+        </tr>
+        <tr>
+          <td><label>WHERE condition:</label></td>
+          <td><input type="text" name="condition" value=""></td>
+          <td><input type="submit" name="Submit" value="Submit"></td>
+        </tr>
+      </form>
+    </table>
+    <hr>
+    <table>
+      <tr>
+        <td>
+          <h3 class="s">Bulk insertion into table:</h3>
+        </td>
+      </tr>
+      <form class="" action="/bulk_insertion_mysql" method="post">
+        <tr>
+          <td><label>Enter Database:</label></td>
+          <td><input type="text" name="database" value=""></td>
+        </tr>
+        <tr>
+          <td><label>Enter TableName: </label></td>
+          <td><input type="text" name="tableName" value=""></td>
+        </tr>
+        <tr>
+          <td><label>Enter Path: </label></td>
+          <td><input type="text" name="path" value=""></td>
+          <td><input type="submit" name="Submit" value="Submit"></td>
+        </tr>
+      </form>
+    </table>
+    <hr>
+    <table>
+      <tr>
+        <td>
+          <h3 class="s">Delete from a table:</h3>
+        </td>
+      </tr>
+      <form class="" action="/delete_mysql" method="post">
+        <tr>
+          <td><label>Enter Database:</label></td>
+          <td><input type="text" name="database" value=""></td>
+        </tr>
+        <tr>
+          <td><label>Enter TableName: </label></td>
+          <td><input type="text" name="tableName" value=""></td>
+        </tr>
+        <tr>
+          <td><label>WHERE Condition: </label></td>
+          <td><input type="text" name="condition" value=""></td>
+          <td><input type="submit" name="Submit" value="Submit"></td>
+        </tr>
+      </form>
+    </table>
+    <hr>
+    <table>
+      <tr>
+        <td>
+          <h3 class="s">Download data from database:</h3>
+        </td>
+      </tr>
+      <form class="" action="/download_mysql" method="post">
+        <tr>
+          <td><label>Enter Database:</label></td>
+          <td><input type="text" name="database" value=""></td>
+        </tr>
+        <tr>
+          <td><label>Enter TableName: </label></td>
+          <td><input type="text" name="tableName" value=""></td>
+        </tr>
+        <tr>
+          <td><label>Enter Filename: </label></td>
+          <td><input type="text" name="filename" value=""></td>
+        </tr>
+        <tr>
+          <td><label>Enter Path_to_save: </label></td>
+          <td><input type="text" name="path_to_save" value=""></td>
+          <td><input type="submit" name="Submit" value="Submit"></td>
+        </tr>
+      </form>
+    </table>
+  </div>
+  <hr>
+  </div>
+</body>
+</html>
